@@ -1,16 +1,16 @@
 import streamlit as st
 
-def hitung_cod(Blanko, Pereaksi, Normalitas, Faktor Pengali, Volume Sampel):
-    return (Blanko - Pereaksi) * Normalitas * Faktor Pengali / Volume Sampel
+def hitung_cod(a, b, N, F, V):
+    return (a - b) * N * F / V
 
 st.title("Aplikasi Perhitungan COD")
 
-Blanko = st.number_input("Masukkan nilai Blanko:")
-Pereaksi = st.number_input("Masukkan nilai Pereaksi:")
-Normalitas = st.number_input("Masukkan nilai Normalitas:")
-Faktor Pengali = st.number_input("Masukkan nilai Faktor Pengali:")
-Volume Sampel = st.number_input("Masukkan nilai Volume Sampel:")
+a = st.number_input("Masukkan nilai a:")
+b = st.number_input("Masukkan nilai b:")
+N = st.number_input("Masukkan nilai N:")
+F = st.number_input("Masukkan nilai F:")
+V = st.number_input("Masukkan nilai V:")
 
 if st.button("Hitung COD"):
-    cod = hitung_cod(Blanko, Pereaksi, Normalitas, Faktor Pengali, Volume Sampel)
+    cod = hitung_cod(a, b, N, F, V)
     st.write("Nilai COD adalah:", cod)
