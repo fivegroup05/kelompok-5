@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
+import streamlit_option_menu as option_menu
 
 selected = option_menu(
     menu_title="APLIKASI CHEMICAL OXYGEN DEMAND", #required
