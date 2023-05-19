@@ -6,7 +6,7 @@ def main():
     menu = ["Pengertian", "Rumus", "Contoh Soal", "Kalkulator"]
     choice = st.sidebar.selectbox("Menu", menu)
 
-    if choice == "Pengertian COD":
+    if choice == "Pengertian":
         st.subheader("pengertian COD")
 
     elif choice == "rumus":
@@ -18,8 +18,8 @@ def main():
     elif choice == "kalkulator":
         st.subheader("Kalkulator")
 
-def pengertian():
-    st.subheader("Pengertian COD")
+def input pengertian():
+    st.subheader("Pengertian")
     st.write("Chemical Oxygen Demand (COD) adalah ukuran kuantitatif dari jumlah oksigen yang diperlukan untuk mengoksidasi bahan organik dalam suatu sampel air atau limbah. Pengukuran kadar COD umumnya dilakukan dalam bidang pengolahan air limbah dan pengujian kualitas air.")
 
 
