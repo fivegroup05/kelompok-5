@@ -69,19 +69,20 @@ if selected == "Kalkulator":
     st.title("Kalkulator Kadar COD")
     st.write("Masukkan nilai untuk menghitung Kadar COD")
 
-    volume_blanko = st.number_input("Masukkan volume blanko (mL)", 0.00)
-    volume_pereaksi = st.number_input("Masukkan volume pereaksi (mL)", 0.00)
-    normalitas = st.number_input("Masukkan nilai normalitas (grek/mL)", 0.000)
-    berat_ekivalen_oksigen = st.number_input(
-        "Masukkan berat ekivalen oksigen (grek) (Tetapan dalam SNI 8000 grek)", 8000
+volume_blanko = st.number_input("Masukkan volume blanko (mL)", 0.00)
+volume_pereaksi = st.number_input("Masukkan volume pereaksi (mL)", 0.00)
+normalitas = st.number_input("Masukkan nilai normalitas (grek/mL)", 0.000)
+berat_ekivalen_oksigen = st.number_input(
+    "Masukkan berat ekivalen oksigen (grek) (Tetapan dalam SNI 8000 grek)", 8000
+)
+volume_sampel = st.number_input("Masukkan nilai volume sampel (mL)", 0.00)
+if volume_sampel != 0:
+    cod = (
+        (volume_blanko - volume_pereaksi)
+        * normalitas
+        * berat_ekivalen_oksigen
+        / volume_sampel
     )
-    volume_sampel = st.number_input("Masukkan nilai volume sampel (mL)", 0.00)
-    if volume_sampel != 0:
-        cod = (
-            (volume_blanko - volume_pereaksi)
-            * normalitas
-            * berat_ekivalen_oksigen
-            / volume_sampel
-        )
-        st.success(f"Kadar COD adalah {cod:.2f} mg/L")
-    st.button("HITUNG")
+    st.success(f"Kadar COD adalah {cod:.2f} mg/L")
+st.button("HITUNG")
+
