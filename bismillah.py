@@ -1,12 +1,12 @@
 import streamlit as st
 
 def main():
-    st.title("Aplikasi Streamlit dengan Sidebar")
+    st.title("Aplikasi perhitungan COD")
 
     menu = ["Pengertian", "Rumus", "Contoh Soal", "Kalkulator"]
     choice = st.sidebar.selectbox("Menu", menu)
 
-    if choice == "Pengertian":
+    if choice == "Pengertian COD":
         st.subheader("pengertian COD")
 
     elif choice == "rumus":
@@ -19,7 +19,7 @@ def main():
         st.subheader("Kalkulator")
 
 def pengertian():
-    st.subheader("Pengertian Chemical Oxygen Demand (COD)")
+    st.subheader("Pengertian COD")
     st.write("Chemical Oxygen Demand (COD) adalah ukuran kuantitatif dari jumlah oksigen yang diperlukan untuk mengoksidasi bahan organik dalam suatu sampel air atau limbah. Pengukuran kadar COD umumnya dilakukan dalam bidang pengolahan air limbah dan pengujian kualitas air.")
 
 
