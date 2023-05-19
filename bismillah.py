@@ -3,20 +3,26 @@ import streamlit as st
 def main():
     st.title("Aplikasi Streamlit dengan Sidebar")
 
-    menu = ["Menu 1", "Menu 2", "Menu 3"]
+    menu = ["Pengertian", "Rumus", "Contoh Soal", "Kalkulator"]
     choice = st.sidebar.selectbox("Menu", menu)
 
-    if choice == "Menu 1":
-        st.subheader("Menu 1 Dipilih")
-        # Tambahkan kode untuk menu 1 di sini
+    if choice == "Pengertian":
+        st.subheader("pengertian COD")
 
-    elif choice == "Menu 2":
-        st.subheader("Menu 2 Dipilih")
-        # Tambahkan kode untuk menu 2 di sini
+    elif choice == "rumus":
+        st.subheader("rumus")
 
-    elif choice == "Menu 3":
-        st.subheader("Menu 3 Dipilih")
-        # Tambahkan kode untuk menu 3 di sini
+    elif choice == "contoh soal":
+        st.subheader("contoh soal")
+        
+    elif choice == "kalkulator":
+        st.subheader("Kalkulator")
+
+def pengertian():
+    st.subheader("Pengertian Chemical Oxygen Demand (COD)")
+    st.write("Chemical Oxygen Demand (COD) adalah ukuran kuantitatif dari jumlah oksigen yang diperlukan untuk mengoksidasi bahan organik dalam suatu sampel air atau limbah. Pengukuran kadar COD umumnya dilakukan dalam bidang pengolahan air limbah dan pengujian kualitas air.")
+
+
 
 if __name__ == "__main__":
     main()
