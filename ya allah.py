@@ -24,4 +24,4 @@ def input_pengertian_cod():
 
 teks_pengertian_cod = input_pengertian_cod()
 
-print("Pengertian Chemical Oxygen Demand (COD):", teks_pengertian_cod)
+print("Pengertian cod:", teks_pengertian_cod)
